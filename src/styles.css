@@ -1,0 +1,86 @@
+h1 {
+  font-family: "Pacifico", cursive;
+  color: #1ab2a8;
+}
+
+h3,
+p {
+  font-family: "Oswald", sans-serif;
+  color: #1ab2a8;
+}
+
+a {
+  font-family: "Oswald", sans-serif;
+  color: #1ab2a8;
+}
+
+li {
+  font-family: "Oswald", sans-serif;
+  text-align: center;
+  color: #1ab2a8;
+  list-style: none;
+  line-height: 300%;
+  margin: none;
+  position: relative;
+  left: -30px;
+}
+
+.container {
+  background: #d1f0ee;
+  max-width: 70%;
+  margin: 50px auto;
+  padding: 50px;
+  border: 3px solid #1ab2a8;
+  border-radius: 5px;
+}
+
+.search {
+  margin: 30px;
+}
+
+.textbox {
+  min-width: 75%;
+  margin: 15px;
+}
+
+.button {
+  border-radius: 25px;
+  border: 1px solid #1ab2a8;
+  background: #1ab2a8;
+  color: #fff;
+  font-size: 16px;
+  padding: 6px 12px;
+  font-weight: bold;
+  transition: all 200ms ease;
+  box-shadow: rgba(37, 39, 89, 0.08) 0px 8px 8px 0;
+}
+
+.button:hover {
+  cursor: pointer;
+  background: #fff;
+  color: #1ab2a8;
+}
+
+.actual {
+  padding-top: 30px;
+  margin-left: 30px;
+}
+
+.forecast {
+  padding-top: 30px;
+  border: 3px solid #fff;
+  border-radius: 5px;
+}
+
+.forecast-table {
+  border-right: 3px solid #fff;
+}
+
+.icon-actual {
+  color: #ffa726;
+  font-size: 48px;
+}
+
+.weather-icon {
+  color: #ffa726;
+}
