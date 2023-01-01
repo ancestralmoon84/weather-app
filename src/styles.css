@@ -34,6 +34,11 @@ li {
   border-radius: 5px;
 }
 
+.footer {
+  max-width: 55%;
+  margin: 0 auto;
+}
+
 .search {
   margin: 30px;
 }
