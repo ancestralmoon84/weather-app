@@ -52,7 +52,7 @@ let enterCity = document.querySelector("#search-city");
 enterCity.addEventListener("submit", submitCity);
 
 function showTemp(response) {
-  document.querySelector(".city").innerHTML = response.data.name;
+  document.querySelector("#city").innerHTML = response.data.name;
   document.querySelector("#sky").innerHTML = response.data.weather[0].main;
   document.querySelector("#temp").innerHTML = Math.round(
     response.data.main.temp
