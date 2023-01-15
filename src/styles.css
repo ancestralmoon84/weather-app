@@ -89,3 +89,10 @@ li {
 .weather-icon {
   color: #ffa726;
 }
+.units .active {
+  color: #1ab2a8;
+  cursor: default;
+}
+.units .active:hover {
+  text-decoration: none;
+}

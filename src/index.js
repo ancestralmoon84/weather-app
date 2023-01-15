@@ -52,11 +52,10 @@ let enterCity = document.querySelector("#search-city");
 enterCity.addEventListener("submit", submitCity);
 
 function showTemp(response) {
+  celsiusTemp = response.data.main.temp;
   document.querySelector("#city").innerHTML = response.data.name;
   document.querySelector("#sky").innerHTML = response.data.weather[0].main;
-  document.querySelector("#temp").innerHTML = Math.round(
-    response.data.main.temp
-  );
+  document.querySelector("#temp").innerHTML = Math.round(celsiusTemp);
   document.querySelector("#RF").innerHTML = Math.round(
     response.data.main.feels_like
   );
@@ -81,3 +80,25 @@ function getCurrentLocation(event) {
 }
 let currentLocationButton = document.querySelector("#current");
 currentLocationButton.addEventListener("click", getCurrentLocation);
+
+function showFahrenheitTemp(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#temp");
+  Clink.classList.remove("active");
+  Flink.classList.add("active");
+  let fahrenheitTemp = (celsiusTemp * 9) / 5 + 32;
+  temperatureElement.innerHTML = Math.round(fahrenheitTemp);
+}
+function showCelsiusTemp(event) {
+  event.preventDefault();
+  Clink.classList.add("active");
+  Flink.classList.remove("active");
+  let temperatureElement = document.querySelector("#temp");
+  temperatureElement.innerHTML = Math.round(celsiusTemp);
+}
+let celsiusTemp = null;
+
+let fahrenheitLink = document.querySelector("#Flink");
+fahrenheitLink.addEventListener("click", showFahrenheitTemp);
+let celsiusLink = document.querySelector("#Clink");
+celsiusLink.addEventListener("click", showCelsiusTemp);
