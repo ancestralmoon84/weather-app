@@ -70,25 +70,6 @@ li {
   padding-top: 30px;
   margin-left: 30px;
 }
-
-.forecast {
-  padding-top: 30px;
-  border: 3px solid #fff;
-  border-radius: 5px;
-}
-
-.forecast-table {
-  border-right: 3px solid #fff;
-}
-
-.icon-actual {
-  color: #ffa726;
-  font-size: 48px;
-}
-
-.weather-icon {
-  color: #ffa726;
-}
 .units .active {
   color: #1ab2a8;
   cursor: default;

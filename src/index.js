@@ -47,6 +47,8 @@ function submitCity(event) {
   let city = document.querySelector("#change-city").value;
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`;
   axios.get(apiUrl).then(showTemp);
+  Clink.classList.add("active");
+  Flink.classList.remove("active");
 }
 let enterCity = document.querySelector("#search-city");
 enterCity.addEventListener("submit", submitCity);
