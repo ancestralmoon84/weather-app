@@ -36,7 +36,7 @@ li {
 
 .footer {
   max-width: 55%;
-  margin: 0 auto;
+  margin: 0px auto;
 }
 
 .search {
@@ -44,7 +44,8 @@ li {
 }
 
 .textbox {
-  min-width: 75%;
+  width: 55%;
+  min-height: 40px;
   margin: 15px;
 }
 
@@ -54,6 +55,7 @@ li {
   background: #1ab2a8;
   color: #fff;
   font-size: 16px;
+  margin: 0px 20px 0px 20px;
   padding: 6px 12px;
   font-weight: bold;
   transition: all 200ms ease;
@@ -68,7 +70,7 @@ li {
 
 .actual {
   padding-top: 30px;
-  margin-left: 30px;
+  margin: 30px 10px 30px 30px;
 }
 .units .active {
   color: #1ab2a8;

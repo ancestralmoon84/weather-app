@@ -38,8 +38,10 @@ function formatDate() {
   return time;
 }
 
-let updateTime = document.querySelector("#datetime");
-updateTime.innerHTML = `${formatDate()}`;
+function updateTime() {
+  let updateTime = document.querySelector("#datetime");
+  updateTime.innerHTML = `${formatDate()}`;
+}
 
 function submitCity(event) {
   event.preventDefault();
@@ -106,7 +108,7 @@ function showForecast(response) {
     <div class="col-4 forecast-table">
     <img src="http://openweathermap.org/img/wn/${
       forecastDay.weather[0].icon
-    }.png" width="40" />
+    }.png" width="50" />
     </div>
   </div>`;
     }
@@ -118,6 +120,7 @@ function showPosition(position) {
   let apiKey = "c8a77112b2faf6684bb4b21a0aa778ae";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&units=metric&appid=${apiKey}`;
   axios.get(apiUrl).then(showTemp);
+  axios.get(apiUrl).then(updateTime);
 }
 function getCurrentLocation(event) {
   event.preventDefault();
@@ -125,6 +128,7 @@ function getCurrentLocation(event) {
 }
 let currentLocationButton = document.querySelector("#current");
 currentLocationButton.addEventListener("click", getCurrentLocation);
+navigator.geolocation.getCurrentPosition(showPosition);
 
 function showFahrenheitTemp(event) {
   event.preventDefault();
