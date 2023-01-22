@@ -70,6 +70,30 @@ function showTemp(response) {
   );
   iconElement.setAttribute("alt", response.data.weather[0].description);
 }
+
+function showForecast() {
+  let forecastElement = document.querySelector("#forecast");
+  let forecastHTML = "";
+  let nextDays = ["Mon", "Tue", "Wed", "Thu", "Fri"];
+  nextDays.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `<div class="row">
+    <div class="col-4 forecast-table">
+        ${day}
+    </div>
+    <div class="col-4 forecast-table">
+        30/20°C
+    </div>
+    <div class="col-4 forecast-table">
+    <img src="http://openweathermap.org/img/wn/50d@2x.png" width="40" />
+    </div>
+  </div>`;
+  });
+  forecastElement.innerHTML = forecastHTML;
+}
+showForecast();
+
 function showPosition(position) {
   let apiKey = "c8a77112b2faf6684bb4b21a0aa778ae";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&units=metric&appid=${apiKey}`;
