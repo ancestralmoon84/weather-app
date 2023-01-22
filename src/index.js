@@ -10,31 +10,13 @@ function formatDate() {
     "Saturday",
   ];
 
-  let months = [
-    "January",
-    "February",
-    "March",
-    "April",
-    "May",
-    "June",
-    "July",
-    "August",
-    "September",
-    "October",
-    "November",
-    "December",
-  ];
-
-  let date = realTime.getDate();
-  let year = realTime.getFullYear();
   let day = days[realTime.getDay()];
-  let month = months[realTime.getMonth()];
   let hour = realTime.getHours();
   hour = hour < 10 ? "0" + hour : hour;
   let minute = realTime.getMinutes();
   minute = minute < 10 ? "0" + minute : minute;
 
-  let time = `${day}, ${month} ${date}, ${year}, ${hour}:${minute}`;
+  let time = `Last updated on ${day} at ${hour}:${minute}`;
   return time;
 }
 
